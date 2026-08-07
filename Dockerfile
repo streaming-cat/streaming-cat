@@ -7,9 +7,12 @@ ENV PYTHONDONTWRITEBYTECODE 1 && \
 
 WORKDIR /app
 
+# Установка uv из ghcr.io/astral-sh/uv:latest и копирование его в контейнер
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 COPY pyproject.toml .
 
-RUN pip install --no-cache-dir .
+RUN uv pip install --system --no-cache-dir .
 
 COPY . .
 

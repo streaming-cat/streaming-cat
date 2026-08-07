@@ -1,5 +1,5 @@
 uv sync
 
-uv run python src/manage.py migrate
+uv run python manage.py migrate
 
-uv run python src/manage.py runserver
+uv run python manage.py runserver 0.0.0.0:8000
