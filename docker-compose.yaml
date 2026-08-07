@@ -1,0 +1,7 @@
+services:
+  django_app:
+    build: .
+    container_name: mse_django
+    ports:
+      - "8000:8000"
+    
