@@ -5,6 +5,8 @@ FROM python:3.14-slim
 ENV PYTHONDONTWRITEBYTECODE 1 && \
     PYTHONUNBUFFERED 1
 
+RUN groupadd -r app_user && useradd -r -g app_user app_user
+
 WORKDIR /app
 
 # Установка uv из ghcr.io/astral-sh/uv:latest и копирование его в контейнер
@@ -14,10 +16,10 @@ COPY pyproject.toml .
 
 RUN uv pip install --system --no-cache-dir .
 
-COPY . .
+COPY --chown=app_user:app_user . .
 
-WORKDIR /app/src
+USER app_user
 
-RUN chmod +x ../run.sh
+RUN chmod +x ./run.sh
 
-CMD ["bash", "../run.sh"]
+CMD ["./run.sh"]
