@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      uses: actions/checkout@v6
+      - uses: actions/checkout@v6
       - name: Check source code with pre-commit hooks
-      run: |
-        curl -LsSf https://astral.sh/uv/install.sh | sh
-        uvx pre-commit run --all-files
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uvx pre-commit run --all-files
