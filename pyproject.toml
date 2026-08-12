@@ -1,5 +1,5 @@
 [project]
-name = "media-streaming-engine"
+name = "streaming-cat"
 version = "0.0.1"
 description = ""
 readme = "README.md"
@@ -8,6 +8,4 @@ license = "MIT"
 license-files = ["LICENSE"]
 dependencies = [
     "django>=6.1",
-    "pytest>=9.1.1",
-    "ruff>=0.16.1",
 ]
