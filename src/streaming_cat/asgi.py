@@ -1,5 +1,5 @@
 """
-ASGI config for media_streaming project.
+ASGI config for streaming_cat project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'media_streaming.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "streaming_cat.settings")
 
 application = get_asgi_application()

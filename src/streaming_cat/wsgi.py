@@ -1,5 +1,5 @@
 """
-WSGI config for media_streaming project.
+WSGI config for streaming_cat project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'media_streaming.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "streaming_cat.settings")
 
 application = get_wsgi_application()
